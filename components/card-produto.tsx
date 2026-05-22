@@ -61,7 +61,7 @@ export default function CardProduto({ produto }: { produto: Produto }) {
           </div>
         </div>
 
-        
+        <a
           href={produto.link_hotmart}
           target="_blank"
           rel="noopener noreferrer"
