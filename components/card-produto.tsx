@@ -28,6 +28,7 @@ export default function CardProduto({ produto }: { produto: Produto }) {
       <h3 className="font-serif text-lg text-neutral-800 leading-snug mb-1">
         {produto.titulo}
       </h3>
+
       <p className="text-sm text-neutral-500 mb-3">{produto.autor}</p>
 
       <p className="text-sm text-neutral-600">
@@ -64,9 +65,9 @@ export default function CardProduto({ produto }: { produto: Produto }) {
           href={produto.link_hotmart}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full text-center text-sm tracking-widest uppercase py-3 px-4 transition-colors duration-200"
+          className="block w-full text-center text-sm tracking-widest uppercase py-3 px-4"
           style={{
-            backgroundColor: hover ? '#1a1a1a' : '#2C2C2C',
+            backgroundColor: '#2C2C2C',
             color: '#FDFBF7',
           }}
         >
