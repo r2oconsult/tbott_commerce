@@ -12,7 +12,6 @@ export default function CardProduto({ produto }: { produto: Produto }) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {/* Imagem */}
       <div className="overflow-hidden rounded-sm mb-4" style={{ aspectRatio: '2/3' }}>
         <img
           src={produto.imagem}
@@ -22,18 +21,15 @@ export default function CardProduto({ produto }: { produto: Produto }) {
         />
       </div>
 
-      {/* Categoria */}
       <p className="text-xs tracking-widest text-neutral-400 uppercase mb-1">
         {produto.categoria}
       </p>
 
-      {/* Título e Autor */}
       <h3 className="font-serif text-lg text-neutral-800 leading-snug mb-1">
         {produto.titulo}
       </h3>
       <p className="text-sm text-neutral-500 mb-3">{produto.autor}</p>
 
-      {/* Preço base sempre visível */}
       <p className="text-sm text-neutral-600">
         A partir de{' '}
         <span className="font-medium text-neutral-800">
@@ -41,7 +37,6 @@ export default function CardProduto({ produto }: { produto: Produto }) {
         </span>
       </p>
 
-      {/* Hover — detalhes expandidos */}
       <div
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: hover ? '200px' : '0px', opacity: hover ? 1 : 0 }}
@@ -50,7 +45,6 @@ export default function CardProduto({ produto }: { produto: Produto }) {
           {produto.descricao}
         </p>
 
-        {/* Opções de formato */}
         <div className="flex flex-col gap-2 mb-4">
           <div className="flex justify-between text-sm">
             <span className="text-neutral-500">Capa Mole</span>
@@ -66,21 +60,14 @@ export default function CardProduto({ produto }: { produto: Produto }) {
           </div>
         </div>
 
-        {/* Botão */}
         
           href={produto.link_hotmart}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full text-center text-sm tracking-widest uppercase py-3 px-4 transition-colors duration-200"
           style={{
-            backgroundColor: '#2C2C2C',
+            backgroundColor: hover ? '#1a1a1a' : '#2C2C2C',
             color: '#FDFBF7',
-          }}
-          onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = '#1a1a1a';
-          }}
-          onMouseLeave={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = '#2C2C2C';
           }}
         >
           Adquirir obra
